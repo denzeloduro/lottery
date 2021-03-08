@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lottery</title>
+</head>
+	<link rel="stylesheet" type="text/css" href="lottery_stylesheet.css">
+
+
+<body>
+
+			<div class="header-image"><div class ="intro">The Lottery</div></div>
+		<div class ="message">A chance to make 7000 every week FOR LIFE!</div>
+		<div class="body-container">
+		<div class="body">	
+		<div class="bodyoutline">
+		<script language="javascript">
+			let size = 5;
+			fiveNumbers = prompt ("Welcome to the Lottery. Input 5 numbers from 1 to 48 seperated by a space!").split(' ');
+				luckyNumber = prompt ("enter a lucky number from 1 - 18 ")
+
+
+				document.write ("Your five numbers are "+ fiveNumbers );
+				document.write('<br>');
+
+
+			for (i = 0; i < 5; i++) {
+
+			if ((fiveNumbers[i] >= 1) && (fiveNumbers[i] <= 48))
+				{
+
+				continue;
+				
+			}
+			else{
+				document.write ("your five numbers must fall within 1- 48" );
+				document.write("<br>");
+				}
+				}
+
+
+			if ((luckyNumber >= 1) && (luckyNumber <= 18))
+				{
+				document.write ("Your lucky number is "+ luckyNumber);
+				document.write("<br>");
+				document.write("<br>");
+				}
+
+			else{
+				document.write ("your lucky number must fall within 1- 18" );
+				document.write("<br>");
+				}
+			
+			
+
+
+			let winningFivenumbers = [];
+			for(i = 0; i < 5; i++) {
+			winningFivenumbers[i] = Math.floor( Math.random() * 47+1 );
+			}
+
+
+			function sortWinningnumbers(a, b)
+				{
+				    return a - b;
+				}
+
+				winningFivenumbers.sort(sortWinningnumbers);
+						
+
+
+			let winningLuckynumber = Math.floor(Math.random() * 17 + 1);
+
+			document.write ("Winning 5 numbers: " + winningFivenumbers);
+			document.write("<br>");
+			document.write ("Winning lucky number: " + winningLuckynumber); 
+			document.write("<br>");
+			document.write("<br>");
+		</script>
+
+
+		<div class="bodybackground">
+			<script language="javascript">
+
+				let matched =[];
+				winningMatch = winningFivenumbers;
+
+
+				for (i = 0; i < fiveNumbers.length; i++) {
+					for (j=0; j< winningMatch.length; j++){
+
+					if (fiveNumbers[i] == winningMatch[j]){
+						matched.push(fiveNumbers[i])
+						break;
+						}	
+					}
+
+				}
+				
+				if (matched.length >0){
+					document.write("The following number(s) matched: " )
+						for(k=0; k < matched.length; k++){
+							document.write (matched[k] + " ")
+						}
+					}
+				
+					document.write("<br>");
+
+
+
+				if (luckyNumber == winningLuckynumber){
+					document.write("The lucky number matched!")
+					document.write("<br>")
+					}
+
+					else{
+						document.write("Sorry, your lucky number was not selected!")
+						document.write("<br>");
+						}
+				
+
+
+				if ((matched.length == 5) && (luckyNumber == winningLuckynumber)){
+					document.write("CONGRATULATIONS! You've won $7,000 a WEEK for LIFE!")
+				}
+
+					if (matched.length == 5) {
+					document.write("CONGRATULATIONS! You've won $25,000 a YEAR for LIFE!")
+				}
+					if ((matched.length == 4) && (luckyNumber == winningLuckynumber)){
+					document.write("CONGRATULATIONS! You've won $5,000!")
+				}
+					else if (matched.length == 4) {
+					document.write("CONGRATULATIONS! You've won $200!")
+				}
+					if ((matched.length == 3) && (luckyNumber == winningLuckynumber)){
+					document.write("CONGRATULATIONS! You've won $150!")
+				}
+					else if (matched.length == 3) {
+					document.write("CONGRATULATIONS! You've won $20!")
+				}
+					if ((matched.length == 2) && (luckyNumber == winningLuckynumber)){
+					document.write("CONGRATULATIONS! You've won $25!")
+				}
+					else if (matched.length == 2) {
+					document.write("CONGRATULATIONS! You've won $3!")
+				}
+					
+					if ((matched.length == 1) && (luckyNumber == winningLuckynumber)){
+					document.write("CONGRATULATIONS! You've won $6!")
+				}
+					else if ((matched.length == 0) && (luckyNumber == winningLuckynumber)){
+					document.write("CONGRATULATIONS! You've won $4!")
+				}
+					if (matched.length == 0) {
+					document.write("Sorry, none of your five numbers were selected!")
+				}
+
+
+				</script>
+			</div>
+		</div>
+		</div>
+	</div>
+
+</body>
+</html>

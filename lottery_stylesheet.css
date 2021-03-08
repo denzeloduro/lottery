@@ -1,0 +1,50 @@
+.body-container{
+	width: 80%;
+	margin: auto;
+
+}
+
+.header-image{
+	width:100%;
+	height: 400px;
+	position:relative;
+	background-image: url('jackpotdylannolte.jpg');
+	background-repeat: no-repeat;
+	margin-top: 50px;
+}
+
+.intro{
+	font: bold 4.0rem Playfair Display,  sans-serif;
+	font-weight: 600;
+	color: #ffffff;
+	line-height: 1.6em;
+	display: block; padding: 40px;
+	text-align: center;
+	filter: drop-shadow(2px 3px 10px #000000);
+}
+
+.message{
+	      font: italic 1.2em Lato, Avenir, Source Sans Pro, Helvetica, sans-serif;
+	      margin:auto;
+		  text-align: center;
+		  padding: 20px 10px;
+}
+.body{
+	      font: 1.4rem Lato, Avenir, Source Sans Pro, Helvetica, sans-serif;
+	      margin:auto;
+		  text-align: center;
+		  padding-bottom: 10px;
+}
+
+.bodybackground {
+		  background-color: #f2f2f2;
+		  padding: 20px 20px;
+		  border-radius: 10px;
+}
+.bodyoutline {
+		  padding: 20px 20px;
+		  border: solid 1px #C4C4C4;
+		  border-radius: 10px;
+
+
+}
